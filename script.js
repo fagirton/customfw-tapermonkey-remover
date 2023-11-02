@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Ukraine Agenda remover
+// @name         Customfw remover
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Removes unneeded things from cool site about hacking consoles
@@ -21,12 +21,15 @@ for (idx= 0; idx < a.length; ++idx){
       a[idx].remove();
     };
 }
-a = document.getElementsByTagName('a');
-for (idx= 0; idx < a.length; ++idx){
-    if (a[idx].href == "https://customfw.xyz/donations"){
-      a[idx].remove();
-    };
-}
+
+// Well, maybe I should leave option to donate to the site (even if it redirects to some strange website that doesn't have any relations to authors)
+//a = document.getElementsByTagName('a');
+//for (idx= 0; idx < a.length; ++idx){
+//    if (a[idx].href == "https://customfw.xyz/donations"){
+//      a[idx].remove();
+//    };
+//}
+
 document.getElementById('stay-for-ukraine-popup').remove();
 document.getElementById('ukranian-flag').remove();
 var b = document.getElementsByClassName('notice--danger');
